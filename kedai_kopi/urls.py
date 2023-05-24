@@ -15,8 +15,20 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+
+from kopi.views import *
+from django.conf import settings
+from django.conf.urls.static import static
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', base, name= 'base'),
+    path('posting/menu-latte.html', menu_latte, name= 'menu_latte'),
+    path('posting/menu-espresso.html', menu_espresso, name= 'menu_espresso'),
+    # path('menu/', menu_latte),
+    
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
