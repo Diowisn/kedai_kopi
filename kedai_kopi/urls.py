@@ -24,7 +24,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', base, name= 'base'),
+    path('base.html', base, name= 'base'),
     path('posting/menu-latte.html', menu_latte, name= 'menu_latte'),
     path('posting/menu-espresso.html', menu_espresso, name= 'menu_espresso'),
     # path('menu/', menu_latte),
