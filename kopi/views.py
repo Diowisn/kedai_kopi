@@ -6,8 +6,8 @@ from django.shortcuts import render
 def base(request) :
     return render(request, 'base.html')
 
-def menu_latte(request) :
-    return render(request, './posting/menu-latte.html')
+# def latte(request) :
+#     return render(request, '../posting/latte.html')
 
-def menu_espresso(request) :
-    return render(request, './posting/menu-espresso.html')
+# def espresso(request) :
+#     return render(request, '../posting/espresso.html')
